@@ -1,0 +1,11 @@
+{% extends 'nova/base.html' %}
+{% load i18n %}
+{% block title %}Detach Port{% endblock %}
+
+{% block page_header %}
+  {% include "horizon/common/_page_header.html" with title=_("Detach Port") %}
+{% endblock page_header %}
+
+{% block dash_main %}
+  {% include "nova/networks/ports/_detach.html" %}
+{% endblock %}

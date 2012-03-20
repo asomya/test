@@ -25,7 +25,8 @@ class BasePanels(horizon.PanelGroup):
     panels = ('overview',
               'instances_and_volumes',
               'images_and_snapshots',
-              'access_and_security')
+              'access_and_security',
+              'networks')
 
 
 class ObjectStorePanels(horizon.PanelGroup):

@@ -18,12 +18,14 @@ def load_test_data(load_onto=None):
     from . import keystone_data
     from . import nova_data
     from . import swift_data
+    from . import quantum_data
 
     # The order of these loaders matters, some depend on others.
     loaders = (keystone_data.data,
                glance_data.data,
                nova_data.data,
-               swift_data.data)
+               swift_data.data,
+               quantum_data.data)
     if load_onto:
         for data_func in loaders:
             data_func(load_onto)
